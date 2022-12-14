@@ -1,11 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-const pdf = require("html-pdf");
+//const pdf = require("html-pdf");
 const cors = require("cors");
 const captcha = require("./captcha");
-const session = require("express-session");
+
 const fs = require("fs");
-const path = require("path");
+
 
 const pdfTemplate = require("./documents");
 
