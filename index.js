@@ -46,16 +46,15 @@ app.use(express.static("public"));
 // });
 
 app.post("/create-pdf", (req, res) => {
-  const option = {
-    phantomPath: "./node_modules/phantomjs/bin/phantomjs",
-  };
-  pdf.create(pdfTemplate(req.body), {}).toFile("result.pdf", (err) => {
-    if (err) {
-      res.send(Promise.reject());
-    }
+  
+  // pdf.create(pdfTemplate(req.body), {}).toFile("result.pdf", (err) => {
+  //   if (err) {
+  //     res.send(Promise.reject());
+  //   }
 
-    res.send(req.body);
-  });
+  //   res.send(req.body);
+  // });
+  res.send(req.body);
 });
 
 app.get("/fetch-pdf", (req, res) => {
